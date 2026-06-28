@@ -17,15 +17,23 @@ export default function Home() {
           talk, the better it understands what matters to you.
         </p>
 
-        <Link
-          href="/chat"
-          className="mt-10 inline-flex h-12 items-center justify-center rounded-full bg-accent px-8 text-base font-medium text-background transition-opacity hover:opacity-90"
-        >
-          Start chatting
-        </Link>
+        <div className="mt-10 flex flex-col items-center gap-3 sm:flex-row">
+          <Link
+            href="/sign-up"
+            className="inline-flex h-12 items-center justify-center rounded-full bg-accent px-8 text-base font-medium text-background transition-opacity hover:opacity-90"
+          >
+            Create account
+          </Link>
+          <Link
+            href="/sign-in"
+            className="inline-flex h-12 items-center justify-center rounded-full border border-border bg-white px-8 text-base font-medium text-foreground transition-opacity hover:opacity-90"
+          >
+            Sign in
+          </Link>
+        </div>
 
         <p className="mt-6 text-sm text-muted">
-          No account needed yet — just say hello.
+          Your conversations are private to you.
         </p>
       </main>
     </div>

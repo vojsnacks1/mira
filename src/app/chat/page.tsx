@@ -1,5 +1,6 @@
 "use client";
 
+import { UserButton } from "@clerk/nextjs";
 import Link from "next/link";
 import { useRef, useState, useEffect } from "react";
 
@@ -49,17 +50,20 @@ export default function ChatPage() {
   return (
     <div className="flex flex-1 flex-col">
       {/* Header */}
-      <header className="flex items-center gap-3 border-b border-border px-6 py-4">
-        <Link
-          href="/"
-          className="flex h-8 w-8 items-center justify-center rounded-lg bg-accent text-sm font-semibold text-background"
-        >
-          M
-        </Link>
-        <div>
-          <p className="text-sm font-medium text-foreground">Mira</p>
-          <p className="text-xs text-muted">Your AI assistant</p>
+      <header className="flex items-center justify-between border-b border-border px-6 py-4">
+        <div className="flex items-center gap-3">
+          <Link
+            href="/"
+            className="flex h-8 w-8 items-center justify-center rounded-lg bg-accent text-sm font-semibold text-background"
+          >
+            M
+          </Link>
+          <div>
+            <p className="text-sm font-medium text-foreground">Mira</p>
+            <p className="text-xs text-muted">Your AI assistant</p>
+          </div>
         </div>
+        <UserButton />
       </header>
 
       {/* Messages */}

@@ -18,9 +18,7 @@ export const metadata: Metadata = {
   description: "A personal AI assistant that remembers you and grows with every conversation.",
 };
 
-const clerkProxyUrl =
-  process.env.NEXT_PUBLIC_CLERK_PROXY_URL ||
-  (process.env.VERCEL === "1" ? "/__clerk" : undefined);
+const clerkProxyUrl = process.env.NEXT_PUBLIC_CLERK_PROXY_URL || undefined;
 
 export default function RootLayout({
   children,
